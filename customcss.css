@@ -15,7 +15,7 @@
     --yc-df-bl-text-color: var(--yc-bl-text-color, #000000);
     --yc-df-bd-text-color: var(--yc-bd-text-color, #ffffff);
     --yc-df-link-color: var(--yc-link-color, #7289f3);
-    --yc-df-link-hover-color: var(--yc-link-hover-color);
+    --yc-df-link-hover-color: var(--yc-link-hover-color, #ec4e4e);
 }
 
 body {
@@ -40,4 +40,97 @@ body[yc-brightness="dark"] {
 
 .yc-a:hover {
     color: var(--yc-df-link-hover-color);
+}
+
+.yc-article {
+    padding: 0px 2%;
+}
+
+.yc-article>h1,
+.yc-article>h2,
+.yc-article>h3,
+.yc-article>h4 {
+    color: var(--yc-df-primary-color);
+}
+
+.yc-audio {
+    padding: 0px;
+}
+
+.yc-blockqoute {
+    padding: 0px;
+}
+
+.yc-button-outline{
+    padding: 10px 20px;
+    border: 0.2em solid var(--yc-df-accent-color);
+    color: var(--yc-df-accent-color);
+    font-weight: bold;
+}
+.yc-button-outline:hover{
+    padding: 10px 20px;
+    background-color: var(--yc-df-accent-color);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+.yc-button-outline-round-1{
+    padding: 10px 20px;
+    border: 0.2em solid var(--yc-df-accent-color);
+    border-radius: 7px;
+    color: var(--yc-df-accent-color);
+    font-weight: bold;
+}
+.yc-button-outline-round-1:hover{
+    padding: 10px 20px;
+    background-color: var(--yc-df-accent-color);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+.yc-button-outline-round-2{
+    padding: 10px 20px;
+    border: 0.2em solid var(--yc-df-accent-color);
+    border-radius: 50px;
+    color: var(--yc-df-accent-color);
+    font-weight: bold;
+}
+.yc-button-outline-round-2:hover{
+    padding: 10px 20px;
+    background-color: var(--yc-df-accent-color);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+.yc-button-fill{
+    padding: 10px 20px;
+    border: 0.2em solid var(--yc-df-accent-color);
+    background-color: var(--yc-df-accent-color);
+    color: white;
+    font-weight: bold;
+}
+.yc-button-fill:hover{
+    cursor: pointer;
+}
+.yc-button-fill-round-1{
+    padding: 10px 20px;
+    border: 0.2em solid var(--yc-df-accent-color);
+    border-radius: 7px;
+    background-color: var(--yc-df-accent-color);
+    color: white;
+    font-weight: bold;
+}
+.yc-button-fill-round-1:hover{
+    cursor: pointer;
+}
+.yc-button-fill-round-2{
+    padding: 10px 20px;
+    border: 0.2em solid var(--yc-df-accent-color);
+    border-radius: 50px;
+    background-color: var(--yc-df-accent-color);
+    color: white;
+    font-weight: bold;
+}
+.yc-button-fill-round-2:hover{
+    cursor: pointer;
 }
