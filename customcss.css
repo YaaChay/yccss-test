@@ -5,21 +5,25 @@
     --yc-dark-smooth-mode-bg-color: #303143;
      */
     --yc-df-primary-color: var(--yc-primary-color, #0064ff);
-    --yc-df-accent-color: var(--yc-accent-color, var(--yc-primary-color, #0064ff));
-    --yc-df-body-color: var(--yc-body-color, #ffffff);
-    --yc-df-scrollbar-color: var(--yc-scrollbar-color, var(--yc-accent-color, var(--yc-primary-color, #0064ff)));
-    --yc-df-sidebar-color: var(--yc-sidebar-color, var(--yc-primary-color, #0064ff));
-    --yc-df-title-color: var(--yc-title-color, var(--yc-primary-color, #0064ff));
+    --yc-df-accent-color: var(--yc-accent-color, var(--yc-df-primary-color));
+    --yc-df-background-color: var(--yc-background-color, #ffffff);
+    --yc-df-scrollbar-color: var(--yc-scrollbar-color, var(--yc-df-accent-color, var(--yc-df-primary-color)));
+    --yc-df-sidebar-color: var(--yc-sidebar-color, var(--yc-df-primary-color));
+    --yc-df-title-color: var(--yc-title-color, var(--yc-df-primary-color));
     --yc-df-subtitle-color: var(--yc-subtitle-color, #9f9f9f);
     --yc-df-icon-color: var(--yc-icon-color, #efefef);
     --yc-df-bl-text-color: var(--yc-bl-text-color, #000000);
     --yc-df-bd-text-color: var(--yc-bd-text-color, #ffffff);
     --yc-df-link-color: var(--yc-link-color, #7289f3);
     --yc-df-link-hover-color: var(--yc-link-hover-color, #ec4e4e);
+    --yc-df-selection-color: var(--yc-selection-color, var(--yc-df-accent-color));
+    --yc-df-selected-text-color: var(--yc-selected-text-color, #ffffff);
+    --yc-df-button-background-color: var(--yc-button-background-color, var(--yc-df-accent-color));
+    --yc-df-button-border-color: var(--yc-button-border-color, var(--yc-df-accent-color));
 }
 
 body {
-    background-color: var(--yc-df-body-color);
+    background-color: var(--yc-df-background-color);
 }
 
 body[yc-brightness="light"] {
@@ -31,7 +35,8 @@ body[yc-brightness="dark"] {
 }
 
 ::selection {
-    background-color: var(--yc-df-accent-color);
+    color: var(--yc-df-selected-text-color);
+    background-color: var(--yc-df-selection-color);
 }
 
 .yc-a {
@@ -61,76 +66,88 @@ body[yc-brightness="dark"] {
     padding: 0px;
 }
 
-.yc-button-outline{
+.yc-button-outline {
     padding: 10px 20px;
-    border: 0.2em solid var(--yc-df-accent-color);
-    color: var(--yc-df-accent-color);
+    border: 0.2em solid var(--yc-df-button-border-color);
+    color: var(--yc-df-button-border-color);
+    background-color: transparent;
     font-weight: bold;
 }
-.yc-button-outline:hover{
+
+.yc-button-outline-round-1 {
     padding: 10px 20px;
-    background-color: var(--yc-df-accent-color);
-    color: white;
-    font-weight: bold;
-    cursor: pointer;
-}
-.yc-button-outline-round-1{
-    padding: 10px 20px;
-    border: 0.2em solid var(--yc-df-accent-color);
+    border: 0.2em solid var(--yc-df-button-border-color);
     border-radius: 7px;
-    color: var(--yc-df-accent-color);
+    color: var(--yc-df-button-border-color);
+    background-color: transparent;
     font-weight: bold;
 }
-.yc-button-outline-round-1:hover{
+
+.yc-button-outline-round-2 {
     padding: 10px 20px;
-    background-color: var(--yc-df-accent-color);
-    color: white;
-    font-weight: bold;
-    cursor: pointer;
-}
-.yc-button-outline-round-2{
-    padding: 10px 20px;
-    border: 0.2em solid var(--yc-df-accent-color);
+    border: 0.2em solid var(--yc-df-button-border-color);
     border-radius: 50px;
-    color: var(--yc-df-accent-color);
+    color: var(--yc-df-button-border-color);
+    background-color: transparent;
     font-weight: bold;
 }
-.yc-button-outline-round-2:hover{
-    padding: 10px 20px;
-    background-color: var(--yc-df-accent-color);
+
+.yc-button-outline-round-3 {
+    padding: 10px;
+    border: 0.2em solid var(--yc-df-button-border-color);
+    border-radius: 100%;
+    color: var(--yc-df-button-border-color);
+    background-color: transparent;
+    font-weight: bold;
+}
+.yc-button-outline:hover,
+.yc-button-outline-round-1:hover,
+.yc-button-outline-round-2:hover,
+.yc-button-outline-round-3:hover {
     color: white;
-    font-weight: bold;
-    cursor: pointer;
+    background-color: var(--yc-df-button-border-color);
 }
-.yc-button-fill{
+
+.yc-button-fill {
     padding: 10px 20px;
-    border: 0.2em solid var(--yc-df-accent-color);
-    background-color: var(--yc-df-accent-color);
+    border: 0.2em solid var(--yc-df-button-background-color);
     color: white;
+    background-color: var(--yc-df-button-background-color);
     font-weight: bold;
 }
-.yc-button-fill:hover{
-    cursor: pointer;
-}
-.yc-button-fill-round-1{
+
+.yc-button-fill-round-1 {
     padding: 10px 20px;
-    border: 0.2em solid var(--yc-df-accent-color);
+    border: 0.2em solid var(--yc-df-button-background-color);
     border-radius: 7px;
-    background-color: var(--yc-df-accent-color);
     color: white;
+    background-color: var(--yc-df-button-background-color);
     font-weight: bold;
 }
-.yc-button-fill-round-1:hover{
-    cursor: pointer;
-}
-.yc-button-fill-round-2{
+
+.yc-button-fill-round-2 {
     padding: 10px 20px;
-    border: 0.2em solid var(--yc-df-accent-color);
+    border: 0.2em solid var(--yc-df-button-background-color);
     border-radius: 50px;
-    background-color: var(--yc-df-accent-color);
     color: white;
+    background-color: var(--yc-df-button-background-color);
     font-weight: bold;
 }
-.yc-button-fill-round-2:hover{
+
+.yc-button-fill-round-3 {
+    padding: 10px;
+    border: 0.2em solid var(--yc-df-button-background-color);
+    border-radius: 100%;
+    color: white;
+    background-color: var(--yc-df-button-background-color);
+    font-weight: bold;
+}
+
+.yc-button-outline:hover,
+.yc-button-outline-round-1:hover,
+.yc-button-outline-round-2:hover,
+.yc-button-fill:hover,
+.yc-button-fill-round-1:hover,
+.yc-button-fill-round-2:hover {
     cursor: pointer;
 }
