@@ -1,7 +1,8 @@
 :root {
     --yc-primary-color: #ff00ff;
     --yc-accent-color: #0064ff;
-    --yc-background-color: #efefef;
+    /* --yc-background-color: #efefef; */
+    --yc-background-color: #202122;
     --yc-scrollbar-color: #e5ff00;
     --yc-sidebar-color: #ff0000;
     --yc-title-color: #00ff37;

@@ -58,8 +58,8 @@ body[yc-brightness="dark"] {
     color: var(--yc-df-primary-color);
 }
 
-.yc-audio {
-    padding: 0px;
+.yc-audio::-webkit-media-controls-panel{
+    background: #0064ff ;
 }
 
 .yc-blockqoute {
@@ -141,6 +141,11 @@ body[yc-brightness="dark"] {
     color: white;
     background-color: var(--yc-df-button-background-color);
     font-weight: bold;
+}
+
+.yc-datalist option{
+    height: 20px;
+    width: inherit;
 }
 
 .yc-button-outline:hover,
