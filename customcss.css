@@ -8,6 +8,7 @@
     --yc-df-accent-color: var(--yc-accent-color, var(--yc-df-primary-color));
     --yc-df-background-color: var(--yc-background-color, #ffffff);
     --yc-df-scrollbar-color: var(--yc-scrollbar-color, var(--yc-df-accent-color, var(--yc-df-primary-color)));
+    --yc-df-cursor-color: var(--yc-cursor-color, var(--yc-accent-color));
     --yc-df-sidebar-color: var(--yc-sidebar-color, var(--yc-df-primary-color));
     --yc-df-title-color: var(--yc-title-color, var(--yc-df-primary-color));
     --yc-df-subtitle-color: var(--yc-subtitle-color, #9f9f9f);
@@ -157,14 +158,14 @@ body[yc-brightness="dark"] {
     width: 200px;
 }
 
-.yc-details>summary {
+.yc-details summary {
     padding: 10px 10px 0px 10px;
     width: 500px;
     background-color: transparent;
     cursor: pointer;
 }
 
-.yc-details>p {
+.yc-details p {
     padding: 0px 10px 10px 10px;
     width: 500px;
     background-color: transparent;
@@ -191,15 +192,25 @@ body[yc-brightness="dark"] {
     font-weight: bold;
 }
 
-input{
-    height: 40px;
-    width: 500px;
+body[yc-brightness="light"] input {
+    color: var(--yc-df-bl-text-color);
+}
+
+body[yc-brightness="dark"] input {
+    color: var(--yc-df-bd-text-color);
+}
+
+.yc-input-box {
+    height: 35px;
+    width: 70%;
     border: 2px solid var(--yc-df-input-border-color);
     border-radius: 5px;
     padding: 0px 10px 0px 10px;
     background: transparent;
-    color: #efefef;
+    font-size: 15px;
+    caret-color: var(--yc-df-cursor-color);
 }
+
 .yc-btn-outline:hover,
 .yc-btn-outline-r1:hover,
 .yc-btn-outline-r2:hover,
