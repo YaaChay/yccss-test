@@ -20,6 +20,7 @@
     --yc-df-selected-text-color: var(--yc-selected-text-color, #ffffff);
     --yc-df-button-background-color: var(--yc-button-background-color, var(--yc-df-accent-color));
     --yc-df-button-border-color: var(--yc-button-border-color, var(--yc-df-accent-color));
+    --yc-df-input-border-color: var(--yc-input-border-color, var(--yc-df-accent-color));
 }
 
 body {
@@ -58,15 +59,15 @@ body[yc-brightness="dark"] {
     color: var(--yc-df-primary-color);
 }
 
-.yc-audio::-webkit-media-controls-panel{
-    background: #0064ff ;
+.yc-audio::-webkit-media-controls-panel {
+    background: #0064ff;
 }
 
 .yc-blockqoute {
     padding: 0px;
 }
 
-.yc-button-outline {
+.yc-btn-outline {
     padding: 10px 20px;
     border: 0.2em solid var(--yc-df-button-border-color);
     color: var(--yc-df-button-border-color);
@@ -74,16 +75,16 @@ body[yc-brightness="dark"] {
     font-weight: bold;
 }
 
-.yc-button-outline-round-1 {
+.yc-btn-outline-r1 {
     padding: 10px 20px;
     border: 0.2em solid var(--yc-df-button-border-color);
-    border-radius: 7px;
+    border-radius: 5px;
     color: var(--yc-df-button-border-color);
     background-color: transparent;
     font-weight: bold;
 }
 
-.yc-button-outline-round-2 {
+.yc-btn-outline-r2 {
     padding: 10px 20px;
     border: 0.2em solid var(--yc-df-button-border-color);
     border-radius: 50px;
@@ -92,7 +93,7 @@ body[yc-brightness="dark"] {
     font-weight: bold;
 }
 
-.yc-button-outline-round-3 {
+.yc-btn-outline-r3 {
     padding: 10px;
     border: 0.2em solid var(--yc-df-button-border-color);
     border-radius: 100%;
@@ -100,15 +101,16 @@ body[yc-brightness="dark"] {
     background-color: transparent;
     font-weight: bold;
 }
-.yc-button-outline:hover,
-.yc-button-outline-round-1:hover,
-.yc-button-outline-round-2:hover,
-.yc-button-outline-round-3:hover {
+
+.yc-btn-outline:hover,
+.yc-btn-outline-r1:hover,
+.yc-btn-outline-r2:hover,
+.yc-btn-outline-r3:hover {
     color: white;
     background-color: var(--yc-df-button-border-color);
 }
 
-.yc-button-fill {
+.yc-btn-fill {
     padding: 10px 20px;
     border: 0.2em solid var(--yc-df-button-background-color);
     color: white;
@@ -116,16 +118,16 @@ body[yc-brightness="dark"] {
     font-weight: bold;
 }
 
-.yc-button-fill-round-1 {
+.yc-btn-fill-r1 {
     padding: 10px 20px;
     border: 0.2em solid var(--yc-df-button-background-color);
-    border-radius: 7px;
+    border-radius: 5px;
     color: white;
     background-color: var(--yc-df-button-background-color);
     font-weight: bold;
 }
 
-.yc-button-fill-round-2 {
+.yc-btn-fill-r2 {
     padding: 10px 20px;
     border: 0.2em solid var(--yc-df-button-background-color);
     border-radius: 50px;
@@ -134,7 +136,7 @@ body[yc-brightness="dark"] {
     font-weight: bold;
 }
 
-.yc-button-fill-round-3 {
+.yc-btn-fill-r3 {
     padding: 10px;
     border: 0.2em solid var(--yc-df-button-background-color);
     border-radius: 100%;
@@ -143,16 +145,68 @@ body[yc-brightness="dark"] {
     font-weight: bold;
 }
 
-.yc-datalist option{
+/* .yc-btn-fill:hover,
+.yc-btn-fill-r1:hover,
+.yc-btn-fill-r2:hover,
+.yc-btn-fill-r3:hover {
+    background: ;
+} */
+
+.yc-datalist {
     height: 20px;
-    width: inherit;
+    width: 200px;
 }
 
-.yc-button-outline:hover,
-.yc-button-outline-round-1:hover,
-.yc-button-outline-round-2:hover,
-.yc-button-fill:hover,
-.yc-button-fill-round-1:hover,
-.yc-button-fill-round-2:hover {
+.yc-details>summary {
+    padding: 10px 10px 0px 10px;
+    width: 500px;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.yc-details>p {
+    padding: 0px 10px 10px 10px;
+    width: 500px;
+    background-color: transparent;
+}
+
+.yc-dl>dt {
+    color: var(--yc-df-primary-color);
+    font-weight: bold;
+}
+
+.yc-fieldset>legend {
+    color: var(--yc-df-primary-color);
+    font-weight: bold;
+}
+
+.yc-h1,
+.yc-h2,
+.yc-h3,
+.yc-h4,
+.yc-h5,
+.yc-h6,
+.yc-header {
+    color: var(--yc-df-primary-color);
+    font-weight: bold;
+}
+
+input{
+    height: 40px;
+    width: 500px;
+    border: 2px solid var(--yc-df-input-border-color);
+    border-radius: 5px;
+    padding: 0px 10px 0px 10px;
+    background: transparent;
+    color: #efefef;
+}
+.yc-btn-outline:hover,
+.yc-btn-outline-r1:hover,
+.yc-btn-outline-r2:hover,
+.yc-btn-outline-r3:hover,
+.yc-btn-fill:hover,
+.yc-btn-fill-r1:hover,
+.yc-btn-fill-r2:hover,
+.yc-btn-fill-r3:hover {
     cursor: pointer;
 }
