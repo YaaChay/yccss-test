@@ -12,21 +12,25 @@
 </head>
 
 <body yc-brightness="light" yc-full-control>
-    <p>Hello World</p>
+    <p style="--yc-text-color: 170, 0, 170;" class="hw">Hello World</p>
     <a href="#" class="yc-a">yaachay.com</a>
     <article class="yc-article">
         <h2>Google Chrome</h2>
         <p>Google Chrome is a web browser developed by Google, released in 2008. Chrome is the world's most popular web
             browser today!</p>
     </article>
-    <button class="yc-btn-fill">Outline</button>
-    <button class="yc-btn-fill-r1">Outline</button>
+    <button class="yc-btn-fill" style="--yc-btn-color: 170, 0, 170;--yc-size:10px;">Edit</button>
+    <button class="yc-btn-fill-r1" style="--yc-btn-color: 221, 103, 103;">Outline</button>
     <button class="yc-btn-fill-r2">Outline</button>
     <button class="yc-btn-fill-r3">Out</button>
-    <button class="yc-btn-outline">Outline</button>
-    <button class="yc-btn-outline-r1">Outline</button>
-    <button class="yc-btn-outline-r2">Outline</button>
+    <button class="yc-btn-outline"style="--yc-btn-color: 170, 0, 170;">Outline</button>
+    <button class="yc-btn-outline-r1" style="--yc-btn-color: 124, 32, 230;">Outline</button>
+    <button class="yc-btn-outline-r2" style="--yc-size:20px;">Outline</button>
     <button class="yc-btn-outline-r3">Out</button>
+    <button class="yc-btn-text" style="--yc-btn-color: 170, 0, 170;--yc-size:10px;">Edit</button>
+    <button class="yc-btn-text-r1" style="--yc-btn-color: 221, 103, 103;">Outline</button>
+    <button class="yc-btn-text-r2">Outline</button>
+    <button class="yc-btn-text-r3">Out</button>
     <input type="search" list="browsers" name="browser" id="browser">
     <datalist id="browsers" class="yc-datalist">
         <option value="Edge">
@@ -53,13 +57,13 @@
         <fieldset class="yc-fieldset">
             <legend>Personalia:</legend>
             <label for="fname">First name:</label>
-            <input type="text" id="fname" name="fname"><br><br>
+            <input type="text" class="yc-input-box" id="fname" name="fname"><br><br>
             <label for="lname">Last name:</label>
-            <input type="text" id="lname" name="lname"><br><br>
+            <input type="text" class="yc-input-box" id="lname" name="lname"><br><br>
             <label for="email">Email:</label>
-            <input type="email" id="email" name="email"><br><br>
+            <input type="email" class="yc-input-box" id="email" name="email"><br><br>
             <label for="birthday">Birthday:</label>
-            <input type="date" id="birthday" name="birthday"><br><br>
+            <input type="date" class="yc-input-box" id="birthday" name="birthday"><br><br>
             <input type="submit" value="Submit" class="yc-btn-fill-r3">
         </fieldset>
     </form>
@@ -70,7 +74,7 @@
     <h5 class="yc-h5">Hello World</h5>
     <h6 class="yc-h6">Hello World</h6>
     <p class="yc-header">Hello World</p>
-    <input type="button" value="Login" class="yc-btn-fill">
+    <input type="button" value="Login" class="yc-btn-outline">
     <input type="checkbox">
     <input type="color">
     <input type="date">
@@ -91,6 +95,11 @@
     <input type="time">
     <input type="url" class="yc-input-box">
     <input type="week">
+    <code>
+        <h1>Code</h1>
+    </code>
 </body>
 
 </html>
+
+

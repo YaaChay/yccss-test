@@ -1,20 +1,26 @@
+@font-face {
+    font-family: JosefinSans-Regular;
+    src: url("assets/fonts/JosefinSans-Regular.ttf");
+}
 :root {
-    --yc-primary-color: #ff00ff;
-    --yc-accent-color: #0064ff;
-    /* --yc-background-color: #efefef; */
-    --yc-background-color: #202122;
-    --yc-scrollbar-color: #e5ff00;
-    --yc-sidebar-color: #ff0000;
-    --yc-title-color: #00ff37;
-    --yc-subtitle-color: #9f9f9f;
-    --yc-icon-color: #efefef;
-    --yc-bl-text-color: #9d9d9d;
-    --yc-bd-text-color: #efefef;
-    --yc-link-color: #dd6767;
-    --yc-link-hover-color: #7c20e6;
-    --yc-selection-color: #00efef;
-    --yc-selected-text-color: #aa00aa;
-    --yc-button-background-color: #e45248;
-    --yc-button-border-color: #62e448;
-    /* --yc-input-border-color: #00efef; */
+    --yc-primary-color: 255, 0, 255;
+    --yc-accent-color: 0, 100, 255;
+    --yc-background-color: 239, 239, 239;
+    /* --yc-background-color: 32, 33, 34; */
+    --yc-fonnt-family: JosefinSans-Regular;
+    --yc-scrollbar-color: 229, 255, 0;
+    --yc-sidebar-color: 255, 0, 0;
+    --yc-title-color: 0, 255, 55;
+    --yc-subtitle-color: 159, 159, 159;
+    --yc-icon-color: 239, 239, 239;
+    --yc-bl-text-color: 159, 159, 159;
+    --yc-bd-text-color: 239, 239, 239;
+    --yc-link-color: 221, 103, 103;
+    --yc-link-hover-color: 124, 32, 230;
+    --yc-selection-color: 0, 239, 239;
+    --yc-selected-text-color: 170, 0, 170;
+    --yc-button-background-color: 228, 82, 72;
+    --yc-button-border-color: 98, 228, 72;
+    /* --yc-input-border-color: 0, 239, 239; */
+    /* --yc-btn-color: 170, 0, 170; */
 }
