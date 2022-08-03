@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 /*!
 * YC-CSS (https://yaachay.github.io/yc-css/index.html)
 * Version 1.0.0
@@ -7,8 +9,6 @@
 * Author Github (https://github.com/YaaChay/)
 * Licensed under the MIT License (https://github.com/YaaChay/yc-css/LICENSE)
 */
-
-@charset "UTF-8";
 
 @font-face {
     font-family: TitilliumWeb-Regular;
@@ -21,27 +21,39 @@
     --yc-light-smooth-mode-bg--color: #ffffff;
     --yc-dark-smooth-mode-bg-color: #303143;
      */
-    --yc-df-primary-color: var(--yc-primary-color, 0, 100, 255);
+    --primary: 0, 100, 255;
+    --white: 255, 255, 255;
+    --black: 0, 0, 0;
+
+    --yc-df-primary-color: var(--yc-primary-color, var(--primary));
     --yc-df-accent-color: var(--yc-accent-color, var(--yc-df-primary-color));
-    --yc-df-background-color: var(--yc-background-color, 255, 255, 255);
+    --yc-df-background-color: var(--yc-background-color, var(--white));
     --yc-df-font-family: var(--yc-font-family, TitilliumWeb-Regular);
-    --yc-df-scrollbar-color: var(--yc-scrollbar-color, var(--yc-df-accent-color, var(--yc-df-primary-color)));
-    --yc-df-cursor-color: var(--yc-cursor-color, var(--yc-accent-color));
-    --yc-df-sidebar-color: var(--yc-sidebar-color, var(--yc-df-primary-color));
-    --yc-df-title-color: var(--yc-title-color, var(--yc-df-primary-color));
-    --yc-df-subtitle-color: var(--yc-subtitle-color, 159, 159, 159);
-    --yc-df-icon-color: var(--yc-icon-color, 239, 239, 239);
-    --yc-df-bl-text-color: var(--yc-bl-text-color, 0, 0, 0);
-    --yc-df-bd-text-color: var(--yc-bd-text-color, 255, 255, 255);
-    --yc-df-link-color: var(--yc-link-color, 114, 137, 243);
-    --yc-df-link-hover-color: var(--yc-link-hover-color, 236, 78, 78);
+    --yc-df-scrollbar-color: var(--yc-scrollbar-color, var(--yc-df-accent-color));
+    --yc-df-scrollbar-bg-color: var(--yc-scrollbar-bg-color);
+    --yc-df-cursor-color: var(--yc-cursor-color, var(--yc-df-accent-color));
     --yc-df-selection-color: var(--yc-selection-color, var(--yc-df-accent-color));
-    --yc-df-selected-text-color: var(--yc-selected-text-color, 255, 255, 255);
-    --yc-df-button-background-color: var(--yc-button-background-color, var(--yc-df-accent-color));
-    --yc-df-button-border-color: var(--yc-button-border-color, var(--yc-df-accent-color));
-    --yc-df-input-background-color: var(--yc-input-background-color, var(--yc-df-accent-color));
-    --yc-df-input-border-color: var(--yc-input-border-color, var(--yc-df-accent-color));
-    --yc-df-table-color: var(--yc-table-color, var(--yc-df-primary-color));
+    --yc-df-selected-text-color: var(--yc-selected-text-color, var(--white));
+    --yc-df-bl-text-color: var(--yc-bl-text-color, var(--black));
+    --yc-df-bd-text-color: var(--yc-bd-text-color, var(--white));
+    --yc-df-link-color: var(--yc-link-color, var(--yc-df-accent-color));
+    --yc-df-link-hover-color: var(--yc-link-hover-color, 236, 78, 78);
+    --yc-df-link-active-color: var(--yc-link-hover-color, var(--yc-df-primary-color));
+    --yc-df-button-color: var(--yc-button-color, var(--yc-df-accent-color));
+    --yc-df-button-fill-color: var(--yc-button-fill-color, var(--yc-df-button-color, var(--yc-df-accent-color)));
+    --yc-df-button-outline-color: var(--yc-button-outline-color, var(--yc-df-button-color, var(--yc-df-accent-color)));
+    --yc-df-button-inkwell-color: var(--yc-button-inkwell-color, var(--yc-df-button-color, var(--yc-df-accent-color)));
+    --yc-df-input-color: var(--yc-input-color, var(--yc-df-accent-color));
+    --yc-df-input-fill-color: var(--yc-input-fill-color, var(--yc-df-input-color, var(--yc-df-accent-color)));
+    --yc-df-input-outline-color: var(--yc-input-outline-color, var(--yc-df-input-color, var(--yc-df-accent-color)));
+    --yc-df-input-checkbox-color: var(--yc-input-checkbox-color, var(--yc-df-input-color, var(--yc-df-accent-color)));
+    --yc-df-input-radio-color: var(--yc-input-radio-color, var(--yc-df-input-color, var(--yc-df-accent-color)));
+    --yc-df-input-range-color: var(--yc-input-range-color, var(--yc-df-input-color, var(--yc-df-accent-color)));
+    --yc-df-table-color: var(--yc-table-color, var(--yc-df-accent-color));
+    --yc-df-table-stripedX-color: var(--yc-table-stripedX-color, var(--yc-df-table-color, var(--yc-df-accent-color)));
+    --yc-df-table-stripedY-color: var(--yc-table-stripedY-color, var(--yc-df-table-color, var(--yc-df-accent-color)));
+    --yc-df-table-bordered-color: var(--yc-table-bordered-color, var(--yc-df-table-color, var(--yc-df-accent-color)));
+    --yc-df-table-borderless-color: var(--yc-table-borderless-color, var(--yc-df-table-color, var(--yc-df-accent-color)));
 }
 
 * {
@@ -67,7 +79,7 @@ body[yc-brightness="dark"] {
 }
 
 .yc-a {
-    color: rgb(var(--yc-df-link-color));
+    color: rgb(var(--yc-tcolor, var(--yc-df-link-color)));
 }
 
 .yc-a:hover {
@@ -78,54 +90,46 @@ body[yc-brightness="dark"] {
 .yc-article>h2,
 .yc-article>h3,
 .yc-article>h4 {
-    color: rgb(var(--yc-df-primary-color));
-}
-
-.yc-audio::-webkit-media-controls-panel {
-    background: #0064ff;
-}
-
-.yc-blockqoute {
-    padding: 0px;
+    color: rgb(var(--yc-tcolor, var(--yc-df-primary-color)));
 }
 
 .yc-btn-fill {
     padding: 9px 20px;
     border: 0px;
-    background-color: rgb(var(--yc-btn-color, var(--yc-df-button-background-color)));
-    color: white !important;
+    background-color: rgb(var(--yc-color, var(--yc-df-button-fill-color)));
+    color: rgb(var(--yc-tcolor, var(--white))) !important;
     font-family: var(--yc-df-font-family);
-    font-size: var(--yc-size, 15px);
+    font-size: var(--yc-fs, 15px);
 }
 
 .yc-btn-fill-r1 {
     padding: 9px 20px;
     border: 0px;
     border-radius: 5px;
-    background-color: rgb(var(--yc-btn-color, var(--yc-df-button-background-color)));
-    color: white !important;
+    background-color: rgb(var(--yc-color, var(--yc-df-button-fill-color)));
+    color: rgb(var(--yc-tcolor, var(--white))) !important;
     font-family: var(--yc-df-font-family);
-    font-size: var(--yc-size, 15px);
+    font-size: var(--yc-fs, 15px);
 }
 
 .yc-btn-fill-r2 {
     padding: 9px 20px;
     border: 0px;
     border-radius: 50px;
-    background-color: rgb(var(--yc-btn-color, var(--yc-df-button-background-color)));
-    color: white !important;
+    background-color: rgb(var(--yc-color, var(--yc-df-button-fill-color)));
+    color: rgb(var(--yc-tcolor, var(--white))) !important;
     font-family: var(--yc-df-font-family);
-    font-size: var(--yc-size, 15px);
+    font-size: var(--yc-fs, 15px);
 }
 
 .yc-btn-fill-r3 {
     padding: 9px;
     border: 0px;
     border-radius: 100%;
-    background-color: rgb(var(--yc-btn-color, var(--yc-df-button-background-color)));
-    color: white !important;
+    background-color: rgb(var(--yc-color, var(--yc-df-button-fill-color)));
+    color: rgb(var(--yc-tcolor, var(--white))) !important;
     font-family: var(--yc-df-font-family);
-    font-size: var(--yc-size, 15px);
+    font-size: var(--yc-fs, 15px);
 
 }
 
@@ -133,106 +137,102 @@ body[yc-brightness="dark"] {
 .yc-btn-fill-r1:hover,
 .yc-btn-fill-r2:hover,
 .yc-btn-fill-r3:hover {
-    background-color: rgba(var(--yc-btn-color, var(--yc-df-button-background-color)), 0.75);
+    background-color: rgba(var(--yc-color, var(--yc-df-button-fill-color)), 0.75);
     transition: 200ms ease-in;
 }
 
 .yc-btn-outline {
     padding: 7px 20px;
-    border: 0.12em solid rgb(var(--yc-btn-color, var(--yc-df-button-border-color)));
-    color: rgb(var(--yc-btn-color, var(--yc-df-button-border-color))) !important;
+    border: 1.5px solid rgb(var(--yc-color, var(--yc-df-button-outline-color)));
+    color: rgb(var(--yc-tcolor, var(--yc-color, var(--yc-df-button-outline-color)))) !important;
     background-color: transparent;
     font-family: var(--yc-df-font-family);
-    font-size: var(--yc-size, 15px);
+    font-size: var(--yc-fs, 15px);
 }
 
 .yc-btn-outline-r1 {
     padding: 7px 20px;
-    border: 0.12em solid rgb(var(--yc-btn-color, var(--yc-df-button-border-color)));
     border-radius: 5px;
-    color: rgb(var(--yc-btn-color, var(--yc-df-button-border-color))) !important;
+    border: 1.5px solid rgb(var(--yc-color, var(--yc-df-button-outline-color)));
+    color: rgb(var(--yc-tcolor, var(--yc-color, var(--yc-df-button-outline-color)))) !important;
     background-color: transparent;
     font-family: var(--yc-df-font-family);
-    font-size: var(--yc-size, 15px);
+    font-size: var(--yc-fs, 15px);
 }
 
 .yc-btn-outline-r2 {
     padding: 7px 20px;
-    border: 0.12em solid rgb(var(--yc-btn-color, var(--yc-df-button-border-color)));
     border-radius: 50px;
-    color: rgb(var(--yc-btn-color, var(--yc-df-button-border-color))) !important;
+    border: 1.5px solid rgb(var(--yc-color, var(--yc-df-button-outline-color)));
+    color: rgb(var(--yc-tcolor, var(--yc-color, var(--yc-df-button-outline-color)))) !important;
     background-color: transparent;
     font-family: var(--yc-df-font-family);
-    font-size: var(--yc-size, 15px);
+    font-size: var(--yc-fs, 15px);
 }
 
 .yc-btn-outline-r3 {
     padding: 7px;
-    border: 0.12em solid rgb(var(--yc-btn-color, var(--yc-df-button-border-color)));
     border-radius: 100%;
-    color: rgb(var(--yc-btn-color, var(--yc-df-button-border-color))) !important;
+    border: 1.5px solid rgb(var(--yc-color, var(--yc-df-button-outline-color)));
+    color: rgb(var(--yc-tcolor, var(--yc-color, var(--yc-df-button-outline-color)))) !important;
     background-color: transparent;
     font-family: var(--yc-df-font-family);
-    font-size: var(--yc-size, 15px);
+    font-size: var(--yc-fs, 15px);
 }
 
 .yc-btn-outline:hover,
 .yc-btn-outline-r1:hover,
 .yc-btn-outline-r2:hover,
 .yc-btn-outline-r3:hover {
-    background-color: rgb(var(--yc-btn-color, var(--yc-df-button-border-color)));
-    color: white !important;
+    background-color: rgb(var(--yc-color, var(--yc-df-button-outline-color)));
+    color: var(--white) !important;
     transition: 200ms ease-in;
 }
 
-.yc-btn-text {
+.yc-btn-inkwell {
     padding: 9px 20px;
     border: 0px;
     background-color: transparent;
-    color: rgb(var(--yc-btn-color, var(--yc-df-button-background-color))) !important;
+    color: rgb(var(--yc-tcolor, var(--yc-color, var(--yc-df-button-inkwell-color)))) !important;
     font-family: var(--yc-df-font-family);
-    font-size: var(--yc-size, 15px);
-    font-weight: bold;
+    font-size: var(--yc-fs, 15px);
 }
 
-.yc-btn-text-r1 {
+.yc-btn-inkwell-r1 {
     padding: 9px 20px;
     border: 0px;
     border-radius: 5px;
     background-color: transparent;
-    color: rgb(var(--yc-btn-color, var(--yc-df-button-background-color))) !important;
+    color: rgb(var(--yc-tcolor, var(--yc-color, var(--yc-df-button-inkwell-color)))) !important;
     font-family: var(--yc-df-font-family);
-    font-size: var(--yc-size, 15px);
-    font-weight: bold;
+    font-size: var(--yc-fs, 15px);
 }
 
-.yc-btn-text-r2 {
+.yc-btn-inkwell-r2 {
     padding: 9px 20px;
     border: 0px;
     border-radius: 50px;
     background-color: transparent;
-    color: rgb(var(--yc-btn-color, var(--yc-df-button-background-color))) !important;
+    color: rgb(var(--yc-tcolor, var(--yc-color, var(--yc-df-button-inkwell-color)))) !important;
     font-family: var(--yc-df-font-family);
-    font-size: var(--yc-size, 15px);
-    font-weight: bold;
+    font-size: var(--yc-fs, 15px);
 }
 
-.yc-btn-text-r3 {
+.yc-btn-inkwell-r3 {
     padding: 9px;
     border: 0px;
     border-radius: 100%;
     background-color: transparent;
-    color: rgb(var(--yc-btn-color, var(--yc-df-button-background-color))) !important;
+    color: rgb(var(--yc-tcolor, var(--yc-color, var(--yc-df-button-inkwell-color)))) !important;
     font-family: var(--yc-df-font-family);
-    font-size: var(--yc-size, 15px);
-    font-weight: bold;
+    font-size: var(--yc-fs, 15px);
 }
 
-.yc-btn-text:hover,
-.yc-btn-text-r1:hover,
-.yc-btn-text-r2:hover,
-.yc-btn-text-r3:hover {
-    background-color: rgba(var(--yc-btn-color, var(--yc-df-button-background-color)), 0.2);
+.yc-btn-inkwell:hover,
+.yc-btn-inkwell-r1:hover,
+.yc-btn-inkwell-r2:hover,
+.yc-btn-inkwell-r3:hover {
+    background-color: rgba(var(--yc-color, var(--yc-df-button-inkwell-color)), 0.2);
     transition: 200ms ease-in;
 }
 
@@ -245,7 +245,6 @@ body[yc-brightness="dark"] {
     padding: 10px 10px 0px 10px;
     width: 500px;
     background-color: transparent;
-    cursor: pointer;
 }
 
 .yc-details p {
@@ -313,6 +312,12 @@ body[yc-brightness="dark"] input {
     caret-color: rgb(var(--yc-df-cursor-color));
 }
 
+.yc-input-outline[type="number"]::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
 .yc-input-outline[type="file"] {
     padding-left: 0px;
 }
@@ -327,38 +332,6 @@ body[yc-brightness="dark"] input {
     font-size: var(--yc-size, 15px);
 }
 
-.yc-input-outline[type="checkbox"] {
-    display: none;
-}
-
-.yc-input-outline[type=checkbox]+label:before {
-    content: "\2714";
-    border: 1px solid rgb(var(--yc-df-input-border-color));
-    border-radius: 0.2em;
-    display: inline-block;
-    width: 1em;
-    height: 1em;
-    padding-left: 0.2em;
-    padding-bottom: 0.3em;
-    margin-right: 0.2em;
-    vertical-align: center;
-    color: transparent;
-    transition: .2s;
-}
-
-.yc-input-outline[type=checkbox]:checked+label:before {
-    color: rgb(var(--yc-df-input-border-color));
-}
-
-.yc-input-outline[type=checkbox]:disabled+label:before {
-    border-color: #aaa;
-}
-
-.yc-input-outline[type=checkbox]:checked:disabled+label:before {
-    background-color: #bfb;
-    border-color: #bfb;
-}
-
 .yc-input-outline::-webkit-search-cancel-button {
     appearance: none;
     -webkit-appearance: none;
@@ -366,6 +339,20 @@ body[yc-brightness="dark"] input {
     width: 10px;
     border-radius: 100%;
     background: rgb(var(--yc-df-input-border-color));
+}
+.yc-input-outline::-webkit-calendar-picker-indicator{
+    accent-color: #0064ff;
+}
+
+.yc-input-checkbox,
+.yc-input-radio {
+    width: 20px;
+    height: 20px;
+    accent-color: rgb(var(--yc-df-primary-color));
+}
+
+.yc-input-range{
+    accent-color: rgb(var(--yc-df-primary-color));
 }
 
 .yc-input-fill:focus,
@@ -406,69 +393,69 @@ body[yc-brightness="dark"] input {
     background-color: rgba(var(--yc-tb-color, var(--yc-df-table-color)), 0.2);
 }
 
-.yc-table-striped-x {
+.yc-table-stripedX {
     border-collapse: collapse;
 }
 
-.yc-table-striped-x>tr>th,
-.yc-table-striped-x>thead>tr>th {
+.yc-table-stripedX>tr>th,
+.yc-table-stripedX>thead>tr>th {
     width: var(--yc-w);
     text-align: start;
     background-color: rgb(var(--yc-tb-color, var(--yc-df-table-color)));
 }
 
-.yc-table-striped-x>tr:nth-child(odd),
-.yc-table-striped-x>tbody>tr:nth-child(odd) {
+.yc-table-stripedX>tr:nth-child(odd),
+.yc-table-stripedX>tbody>tr:nth-child(odd) {
     background-color: rgba(var(--yc-tb-color, var(--yc-df-table-color)), 0.2);
 }
 
-.yc-table-striped-x>tr:nth-child(even),
-.yc-table-striped-x>tbody>tr:nth-child(even) {
+.yc-table-stripedX>tr:nth-child(even),
+.yc-table-stripedX>tbody>tr:nth-child(even) {
     background-color: rgba(var(--yc-tb-color, var(--yc-df-table-color)), 0.1);
 }
 
-.yc-table-striped-x>tr>th,
-.yc-table-striped-x>thead>tr>th,
-.yc-table-striped-x>tr>td,
-.yc-table-striped-x>tbody>tr>td {
+.yc-table-stripedX>tr>th,
+.yc-table-stripedX>thead>tr>th,
+.yc-table-stripedX>tr>td,
+.yc-table-stripedX>tbody>tr>td {
     padding: 8px;
 }
 
-.yc-table-striped-x>tr:hover,
-.yc-table-striped-x>tbody>tr:hover {
+.yc-table-stripedX>tr:hover,
+.yc-table-stripedX>tbody>tr:hover {
     background-color: rgba(var(--yc-tb-color, var(--yc-df-table-color)), 0.2);
 }
 
-.yc-table-striped-y {
+.yc-table-stripedY {
     border-collapse: collapse;
 }
 
-.yc-table-striped-y>tr>th,
-.yc-table-striped-y>thead>tr>th {
+.yc-table-stripedY>tr>th,
+.yc-table-stripedY>thead>tr>th {
     width: var(--yc-w);
     text-align: start;
     background-color: rgb(var(--yc-tb-color, var(--yc-df-table-color)));
 }
 
-.yc-table-striped-y>tr>td:nth-child(odd),
-.yc-table-striped-y>tbody>tr>td:nth-child(odd) {
+.yc-table-stripedY>tr>td:nth-child(odd),
+.yc-table-stripedY>tbody>tr>td:nth-child(odd) {
     background-color: rgba(var(--yc-tb-color, var(--yc-df-table-color)), 0.2);
 }
 
-.yc-table-striped-y>tr>td:nth-child(even),
-.yc-table-striped-y>tbody>tr>td:nth-child(even) {
+.yc-table-stripedY>tr>td:nth-child(even),
+.yc-table-stripedY>tbody>tr>td:nth-child(even) {
     background-color: rgba(var(--yc-tb-color, var(--yc-df-table-color)), 0.1);
 }
 
-.yc-table-striped-y>tr>th,
-.yc-table-striped-y>thead>tr>th,
-.yc-table-striped-y>tr>td,
-.yc-table-striped-y>tbody>tr>td {
+.yc-table-stripedY>tr>th,
+.yc-table-stripedY>thead>tr>th,
+.yc-table-stripedY>tr>td,
+.yc-table-stripedY>tbody>tr>td {
     padding: 8px;
 }
 
-.yc-table-striped-y>tr:hover,
-.yc-table-striped-y>tbody>tr:hover {
+.yc-table-stripedY>tr:hover,
+.yc-table-stripedY>tbody>tr:hover {
     background-color: rgba(var(--yc-tb-color, var(--yc-df-table-color)), 0.2);
 }
 
@@ -514,10 +501,10 @@ body[yc-brightness="dark"] input {
 
 .yc-table>tr>td:first-child,
 .yc-table>tbody>tr>td:first-child,
-.yc-table-striped-x>tr>td:first-child,
-.yc-table-striped-x>tbody>tr>td:first-child,
-.yc-table-striped-y>tr>td:first-child,
-.yc-table-striped-y>tbody>tr>td:first-child,
+.yc-table-stripedX>tr>td:first-child,
+.yc-table-stripedX>tbody>tr>td:first-child,
+.yc-table-stripedY>tr>td:first-child,
+.yc-table-stripedY>tbody>tr>td:first-child,
 .yc-table-bordered>tr>td:first-child,
 .yc-table-bordered>tbody>tr>td:first-child,
 .yc-table-borderless>tr>td:first-child,
@@ -532,6 +519,11 @@ body[yc-brightness="dark"] input {
 .yc-btn-fill,
 .yc-btn-fill-r1,
 .yc-btn-fill-r2,
-.yc-btn-fill-r3 {
+.yc-btn-fill-r3,
+.yc-btn-inkwell,
+.yc-btn-inkwell-r1,
+.yc-btn-inkwell-r2,
+.yc-btn-inkwell-r3,
+.yc-details summary {
     cursor: pointer;
 }
