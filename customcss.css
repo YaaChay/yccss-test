@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 /*!
-* YC-CSS (https://yaachay.github.io/yc-css/index.html)
+* YC-CSS (https://yaachay.github.io/yc-css/)
 * Version 1.0.0
 * Copyright 2022 YC-CSS
 * Copyright 2022 YaaChay.
@@ -16,15 +16,10 @@
 }
 
 :root {
-    /* --yc-light-mode-bg-color: #F8F9FA;
-    --yc-dark-mode-bg--color: #202122;
-    --yc-light-smooth-mode-bg--color: #ffffff;
-    --yc-dark-smooth-mode-bg-color: #303143;
-     */
+    /* --yc-light-mode-bg-color: #F8F9FA;--yc-dark-mode-bg--color: #202122;--yc-light-smooth-mode-bg--color: #ffffff;--yc-dark-smooth-mode-bg-color: #303143; */
     --primary: 0, 100, 255;
     --white: 255, 255, 255;
     --black: 0, 0, 0;
-
     --yc-df-primary-color: var(--yc-primary-color, var(--primary));
     --yc-df-accent-color: var(--yc-accent-color, var(--yc-df-primary-color));
     --yc-df-background-color: var(--yc-background-color, var(--white));
@@ -133,7 +128,6 @@ body[yc-brightness="dark"] {
     color: rgb(var(--yc-tcolor, var(--white))) !important;
     font-family: var(--yc-df-font-family);
     font-size: var(--yc-fs, 15px);
-
 }
 
 .yc-btn-fill:hover,
@@ -188,7 +182,7 @@ body[yc-brightness="dark"] {
 .yc-btn-outline-r2:hover,
 .yc-btn-outline-r3:hover {
     background-color: rgb(var(--yc-color, var(--yc-df-button-outline-color)));
-    color: var(--white) !important;
+    color: rgb(var(--white)) !important;
     transition: 200ms ease-in;
 }
 
@@ -591,14 +585,26 @@ body[yc-brightness="dark"] .yc-input-outline::-webkit-calendar-picker-indicator 
     transition: 200ms ease-in;
 }
 
-body[yc-brightness="light"] textarea {
+body[yc-brightness="light"] .yc-textarea-fill,
+body[yc-brightness="light"] .yc-textarea-outline {
     color: rgb(var(--yc-df-bl-text-color));
-    ;
 }
 
-body[yc-brightness="dark"] textarea {
+body[yc-brightness="dark"] .yc-textarea-fill,
+body[yc-brightness="dark"] .yc-textarea-outline {
     color: rgb(var(--yc-df-bd-text-color));
-    ;
+}
+
+body[yc-brightness="light"] .yc-stroked-text {
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: rgb(var(--yc-tcolor, var(--yc-df-bl-text-color)));
+}
+
+body[yc-brightness="dark"] .yc-stroked-text {
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: rgb(var(--yc-tcolor, var(--yc-df-bd-text-color)));
 }
 
 .yc-btn-outline,
